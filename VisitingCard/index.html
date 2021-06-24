@@ -229,13 +229,13 @@
         <a-assets>
           <img id="card" src="./assets/card-example/card.png"/>
           <img id="icon-web" src="./assets/icon/website.png"/>
-          <img id="icon-location" src="./assets/card-example/icons/location.png"/>
-          <img id="icon-profile" src="./assets/card-example/icons/profile.png" />
+          <img id="icon-wp" src="./assets/card-example/icons/location.png"/>
+          <img id="icon-tw" src="./assets/card-example/icons/profile.png" />
           <img id="icon-phone" src="./assets/icon/phone.png" />
           <img id="icon-email" src="./assets/icon/Mail.png" />
           <img id="icon-play" src="./assets/card-example/icons/play.png" />
-          <img id="icon-left" src="./assets/card-example/icons/left.png" />
-          <img id="icon-right" src="./assets/card-example/icons/right.png" />
+          <img id="icon-fb" src="./assets/icon/facebook.png" />
+          <img id="icon-insta" src="./assets/icon/instagram.png" />
           <img id="paintandquest-preview" src="./assets/card-example/portfolio/paintandquest-preview.png" />
           <video id="paintandquest-video-mp4" autoplay="false" loop="true" src="./assets/card-example/portfolio/paintandquest.mp4"></video>
           <video id="paintandquest-video-webm" autoplay="false" loop="true" src="./assets/card-example/portfolio/paintandquest.webm"></video>
@@ -268,9 +268,11 @@
             </a-entity>
 
             <a-image visible=false id="portfolio-left-button" class="clickable" src="#icon-left" position="-0.7 0 0" height="0.15" width="0.15"></a-image>
-            <a-image visible=false id="portfolio-right-button" class="clickable" src="#icon-right" position="0.7 0 0" height="0.15" width="0.15"></a-image>
+            <a-image visible=false id="portfolio-right-button" class="clickable" src="#icon-right" position="-0.14 -0.5 0" height="0.15" width="0.15"></a-image>
           </a-entity>
-
+           <a-image visible=false id="web-button" class="clickable" src="#icon-fb" alpha-test="0.5" position="-0.14 -0.5 0" height="0.15" width="0.15"
+            animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
+          ></a-image>
           <a-image visible=false id="profile-button" class="clickable" src="#icon-profile" position="-0.42 -0.5 0" height="0.15" width="0.15"
             animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
           ></a-image>
@@ -278,6 +280,7 @@
           <a-image visible=false id="web-button" class="clickable" src="#icon-web" alpha-test="0.5" position="-0.14 -0.5 0" height="0.15" width="0.15"
             animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
           ></a-image>
+
 
           <a-image visible=false id="email-button" class="clickable" src="#icon-email"  position="0.14 -0.5 0" height="0.15" width="0.15"
             animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
