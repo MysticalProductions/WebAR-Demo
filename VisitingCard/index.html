@@ -53,7 +53,7 @@
 
       const showIntro = () =>{
 
-      	  const introId = document.querySelector("#intro");
+      	  const introId = document.querySelector("#intro_card");
       	   introId.setAttribute("visible", true);
       	    console.log("found");
       }
@@ -250,9 +250,8 @@
         <a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
           <a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
 
-         
-
-           <a-image visible=false id="intro" src="#intro" alpha-test="0.5" position="0 0 0" height="0.552" width="1"
+   
+           <a-image visible=false id="intro_card" src="#intro" alpha-test="0.5" position="0 0 0" height="0.552" width="1"
              animation="property: position; to: 0 1 0; dur: 1000; easing: easeInOutQuad; loop: false; dir: alternate"
           ></a-image>
 
