@@ -8,22 +8,25 @@
     <script>
       const showInfo = () => {
         let y = 0;
-        const profileButton = document.querySelector("#profile-button");
-        const webButton = document.querySelector("#web-button");
+        const instaButton = document.querySelector("#insta-button");
+        const fbButton = document.querySelector("#fb-button");
         const emailButton = document.querySelector("#email-button");
-        const locationButton = document.querySelector("#location-button");
-        const text = document.querySelector("#text");
-        console.log("show");
-        profileButton.setAttribute("visible", true);
+        const phoneButton = document.querySelector("#phone-button");
+        const webButton = document.querySelector("#web-button");
+        
+        instaButton.setAttribute("visible", true);
         setTimeout(() => {
-          webButton.setAttribute("visible", true);
+          fbButton.setAttribute("visible", true);
         }, 300);
         setTimeout(() => {
           emailButton.setAttribute("visible", true);
         }, 600);
         setTimeout(() => {
-          locationButton.setAttribute("visible", true);
+          phoneButton.setAttribute("visible", true);
         }, 900);
+        setTimeout(() => {
+          webButton.setAttribute("visible", true);
+        }, 1200);
 
         let currentTab = '';
         webButton.addEventListener('click', function (evt) {
@@ -34,11 +37,11 @@
           text.setAttribute("value", "hello@softmind.tech");
           currentTab = 'email';
         });
-        profileButton.addEventListener('click', function (evt) {
+        instaButton.addEventListener('click', function (evt) {
           text.setAttribute("value", "AR, VR solutions and consultation");
           currentTab = 'profile';
         });
-        locationButton.addEventListener('click', function (evt) {
+        fbButton.addEventListener('click', function (evt) {
           console.log("loc");
           text.setAttribute("value", "Vancouver, Canada | Hong Kong");
           currentTab = 'location';
@@ -121,7 +124,7 @@
         }, 10);
       }*/
 
-      AFRAME.registerComponent('mytarget', {
+      AFRAME.registerComponent('mytarget',{
         init: function () {
           this.el.addEventListener('targetFound', event => {
             console.log("target found");
@@ -153,25 +156,25 @@
       }
      
       #example-scanning-overlay {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	background: transparent;
-	z-index: 2;
+	   display: flex;
+	   align-items: center;
+	   justify-content: center;
+	   position: absolute;
+	   left: 0;
+	   right: 0;
+	   top: 0;
+	   bottom: 0;
+	   background: transparent;
+	   z-index: 2;
       }
       @media (min-aspect-ratio: 1/1) {
-	#example-scanning-overlay .inner {
-	  width: 50vh;
-	  height: 50vh;
-	}
+	   #example-scanning-overlay .inner {
+	    width: 50vh;
+	    height: 50vh;
+	  }
       }
       @media (max-aspect-ratio: 1/1) {
-	#example-scanning-overlay .inner {
+	   #example-scanning-overlay .inner {
 	  width: 80vw;
 	  height: 80vw;
 	}
@@ -232,35 +235,29 @@
         <a-assets>
           <img id="card" src="./assets/targets.jpg"/>
           <img id="icon-web" src="./assets/icon/website.png"/>
-          <img id="icon-wp" src="./assets/icon/whatsapp.png"/>
-          <img id="icon-tw" src="./assets/icon/profile.png" />
-          <img id="icon-phone" src="./assets/icon/phone.png" />
-          <img id="icon-email" src="./assets/icon/Mail.png" />
-          <img id="icon-play" src="./assets/card-example/icons/play.png" />
-          <img id="icon-fb" src="./assets/icon/facebook.png" />
-          <img id="icon-insta" src="./assets/icon/instagram.png" />
-          <img id="intro" src="./assets/intro.png" />
+          <img id="icon-phone" src="./assets/icon/phone.png"/>
+          <img id="icon-email" src="./assets/icon/Mail.png"/>
+          <img id="icon-fb" src="./assets/icon/facebook.png"/>
+          <img id="icon-insta" src="./assets/icon/instagram.png"/>
+          <img id="intro" src="./assets/intro.png"/>
           <video id="paintandquest-video-mp4" autoplay="false" loop="true" src="./assets/video.mp4"></video>
-          
         </a-assets>
          
         <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: 10000; objects: .clickable">
         </a-camera>
 
         <a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
-          
+
            <a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
    
            <a-image visible=false id="intro_card" src="#intro" alpha-test="0.5" position="0 0 0" height="0.552" width="1" animation="property: position; to: 0 0.5 0; easing: linear; dur: 5000; loop: false; dir: normal"
           ></a-image>
 
-
-
-           <a-image visible=false id="web-button" class="clickable" src="#icon-fb" alpha-test="0.5" position="-0.60 -0.5 0" height="0.15" width="0.15"
+           <a-image visible=false id="fb-button" class="clickable" src="#icon-fb" alpha-test="0.5" position="-0.60 -0.5 0" height="0.15" width="0.15"
             animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
           ></a-image>
 
-          <a-image visible=false id="profile-button" class="clickable" src="#icon-profile" position="-0.42 -0.5 0" height="0.15" width="0.15"
+          <a-image visible=false id="insta-button" class="clickable" src="#icon-insta"  position="-0.42 -0.5 0" height="0.15" width="0.15"
             animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
           ></a-image>
 
@@ -273,7 +270,7 @@
             animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
           ></a-image>
 
-          <a-image visible=false id="location-button" class="clickable" src="#icon-location" position="0.42 -0.5 0" height="0.15" width="0.15"
+          <a-image visible=false id="lphone-button" class="clickable" src="#icon-phone" position="0.42 -0.5 0" height="0.15" width="0.15"
             animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
           ></a-image>
    
