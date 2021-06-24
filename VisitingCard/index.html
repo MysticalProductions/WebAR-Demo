@@ -145,15 +145,14 @@
           this.el.addEventListener('targetFound', event => {
             console.log("target found");
                 showIntro(() => {
-                  setTimeout(() => {
                     showInfo();
                   }, 300);
-                });
+                
               }, 300);
             
           
           this.el.addEventListener('targetLost', event => {
-            console.log("target found");
+            console.log("target lost");
           });
           //this.el.emit('targetFound');
         }
