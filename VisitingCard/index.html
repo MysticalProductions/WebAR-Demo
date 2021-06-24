@@ -146,7 +146,8 @@
           this.el.addEventListener('targetFound', event => {
             console.log("target found");
                 showIntro(() => {
-                    showInfo();
+                    showInfo(() => {
+                    	document.querySelector("#video-mp4").play();
                   }, 300);
                 
               }, 300);
