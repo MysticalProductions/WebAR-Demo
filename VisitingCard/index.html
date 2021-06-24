@@ -30,26 +30,42 @@
 
         let currentTab = '';
         webButton.addEventListener('click', function (evt) {
-          text.setAttribute("value", "https://softmind.tech");
+          text.setAttribute("value","https://www.chockytales.com");
           currentTab = 'web';
         });
         emailButton.addEventListener('click', function (evt) {
-          text.setAttribute("value", "hello@softmind.tech");
+          text.setAttribute("value","info@chockytales.com");
           currentTab = 'email';
         });
         instaButton.addEventListener('click', function (evt) {
-          text.setAttribute("value", "AR, VR solutions and consultation");
-          currentTab = 'profile';
+          text.setAttribute("value", "https://instagram.com/chockytales?igshid=10si6cktw7obb");
+          currentTab = 'insta';
         });
         fbButton.addEventListener('click', function (evt) {
-          console.log("loc");
-          text.setAttribute("value", "Vancouver, Canada | Hong Kong");
-          currentTab = 'location';
+          text.setAttribute("value", "https://www.facebook.com/chockytales/");
+          currentTab = 'fb';
+        }); 
+        phoneButton.addEventListener('click', function (evt) {
+          text.setAttribute("value", "tel:5554280940");
+          currentTab = 'phone';
         });
+         
 
         text.addEventListener('click', function (evt) {
           if (currentTab === 'web') {
-            window.location.href="https://softmind.tech";
+            window.location.href="https://www.chockytales.com";
+          }
+          else if (currentTab === 'email') {
+            window.location.href="mailto:info@chockytales.com";
+          }
+          else if (currentTab === 'insta') {
+            window.location.href="https://instagram.com/chockytales?igshid=10si6cktw7obb";
+          }
+          else if (currentTab === 'fb') {
+            window.location.href="https://www.facebook.com/chockytales/";
+          }
+          else if (currentTab === 'phone') {
+            window.location.href="tel:5554280940";
           }
         });
       }
