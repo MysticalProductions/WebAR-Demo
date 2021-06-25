@@ -148,7 +148,7 @@
             console.log("target found");
                 showIntro(() => {
                     showInfo(() => {
-                    	document.querySelector("#video-mp4").play();
+                    	
                   }, 300);
                 
               }, 300);
@@ -156,6 +156,7 @@
           
           this.el.addEventListener('targetLost', event => {
             console.log("target lost");
+             document.querySelector("#video-mp4").play();
           });
           //this.el.emit('targetFound');
         })
