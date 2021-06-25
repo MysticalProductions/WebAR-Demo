@@ -78,7 +78,7 @@
       	  
         }*/
          const showIntro = () => {
-         	let x=0.6;
+         	let x=0.2;
       	  const introId = document.querySelector("#intro_card");
       	   introId.setAttribute("visible", true);
       	   const videoframe = document.querySelector("#introvideo");
@@ -88,6 +88,7 @@
            if (x >= 0.8) 
            {
             clearInterval(id);
+            done();
            }
            videoframe.setAttribute("position", x + " 0 0");
           console.log(x + " 0 0");
