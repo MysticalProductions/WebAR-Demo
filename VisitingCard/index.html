@@ -81,6 +81,7 @@
          	let x=0;
       	  const introId = document.querySelector("#intro_card");
       	   introId.setAttribute("visible", true);
+      	   const videoIntro = document.querySelector("#video-mp4");
       	   const videoframe = document.querySelector("#introvideo");
       	   const id = setInterval(() => {
            x += 0.2;
@@ -91,8 +92,13 @@
             done();
            }
            videoframe.setAttribute("position", x + " 0 0");
-          
+
         },200);
+      	   setTimeout(()=>{
+      	   	videoIntro.play();
+      	   },250);
+      	   
+
            
       	const instaButton = document.querySelector("#insta-button");
         const fbButton = document.querySelector("#fb-button");
