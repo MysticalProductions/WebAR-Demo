@@ -81,25 +81,21 @@
          	let x=0;
       	  const introId = document.querySelector("#intro_card");
       	   introId.setAttribute("visible", true);
-      	   const videoIntro = document.querySelector("#video-mp4");
-      	   const videoframe = document.querySelector("#introvideo");
+      	   //video frame animation
+      	   const videoIntro = document.querySelector("#video-mp4"); //setvideo
+      	   const videoframe = document.querySelector("#introvideo");//set video entity
       	   const id = setInterval(() => {
            x += 0.2;
-           
            if (x >=1) 
            {
             clearInterval(id);
             done();
            }
-           videoframe.setAttribute("position", x + " 0 0");
-
+           videoframe.setAttribute("position", x + " 0 0");  //set position of video entity
         },200);
       	   setTimeout(()=>{
-      	   	videoIntro.play();
+      	   	videoIntro.play(); //play video after animation 
       	   },250);
-      	   
-
-           
       	const instaButton = document.querySelector("#insta-button");
         const fbButton = document.querySelector("#fb-button");
         const emailButton = document.querySelector("#email-button");
@@ -328,7 +324,7 @@
 
            <a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
    
-           <a-image visible=false id="intro_card" src="#intro" alpha-test="0.5" position="0 0 0" height="0.552" width="1" animation="property: position; to: 0 0.5 0; easing: linear; dur: 5000; loop: false; dir: normal"
+           <a-image visible=false id="intro_card" src="#intro" alpha-test="0.5" position="0 0 0" height="0.552" width="1" animation="property: position; to: 0 0.5 0; easing: linear; dur: 5000; loop: true; dir: normal"
           ></a-image>
 
            <a-image visible=false id="fb-button" class="clickable" src="#icon-fb" alpha-test="0.4" position="-0.4 -0.4 0" height="0.11" width="0.11"
