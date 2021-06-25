@@ -82,6 +82,7 @@
       	  const introId = document.querySelector("#intro_card");
       	   introId.setAttribute("visible", true);
       	   const videoframe = document.querySelector("#video-mp4");
+      	   videoframe.setAttribute("position","0 0 0");
       	   const id = setInterval(() => {
            x += 0.2;
            console.log(x);
@@ -89,7 +90,7 @@
            {
             clearInterval(id);
            }
-           videoframe.setAttribute("position", x +" 0 0");
+           videoframe.setAttribute("position", x + " 0 0");
           console.log(x + " 0 0");
         },1000);
            videoframe.play();
