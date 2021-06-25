@@ -95,7 +95,7 @@
         },400);
       	   setTimeout(()=>{
       	   	videoIntro.play(); //play video after animation 
-      	   },450);
+      	   },550);
          // idcard event
          let y =0;
          const idCard = document.querySelector("#intro_card_ent");
@@ -118,6 +118,8 @@
         const phoneButton = document.querySelector("#phone-button");
         const webButton = document.querySelector("#web-button");
         
+        const idbutton = setInterval(()=>{
+
         fbButton.setAttribute("visible", true);
         setTimeout(() => {
           instaButton.setAttribute("visible", true);
@@ -131,7 +133,7 @@
         setTimeout(() => {
           phoneButton.setAttribute("visible", true);
         }, 1500);
-
+        },300);
         let currentTab = '';
         webButton.addEventListener('click', function (evt) {
            window.location.href="https://www.chockytales.com";
