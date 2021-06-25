@@ -82,15 +82,13 @@
       	  const introId = document.querySelector("#intro_card");
       	   introId.setAttribute("visible", true);
       	   const videoframe = document.querySelector("#video-mp4");
-      	   videoframe.setAttribute("position", x + "0 -0.01");
       	   const id = setInterval(() => {
-           x += 0.3;
+           x += 0.2;
            if (x >= 1) {
             clearInterval(id);
-            
           }
           videoframe.setAttribute("position", x + "0 0");
-        },10);
+        },1000);
       	   document.querySelector("#video-mp4").play();
       	const instaButton = document.querySelector("#insta-button");
         const fbButton = document.querySelector("#fb-button");
