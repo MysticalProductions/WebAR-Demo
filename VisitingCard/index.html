@@ -81,8 +81,8 @@
          	let x=0;
       	  const introId = document.querySelector("#intro_card");
       	   introId.setAttribute("visible", true);
-      	   const videoframe = document.querySelector("#video-mp4");
-      	   videoframe.setAttribute("position","1 0 0");
+      	   const videoframe = document.querySelector("#introvideo");
+      	  
       	   const id = setInterval(() => {
            x += 0.2;
            console.log(x);
@@ -93,7 +93,7 @@
            videoframe.setAttribute("position", x + " 0 0");
           console.log(x + " 0 0");
         },1000);
-           videoframe.play();
+           
       	const instaButton = document.querySelector("#insta-button");
         const fbButton = document.querySelector("#fb-button");
         const emailButton = document.querySelector("#email-button");
@@ -345,8 +345,9 @@
           <a-image visible= false id="phone-button" class="clickable" src="#icon-phone" position="0.4 -0.4 0" height="0.11" width="0.11"
             animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
           ></a-image>
+           <a-entity id ="introvideo">
             <a-video src="#video-mp4" width="0.5" height="1" position="0 0 0"  webkit-playsinline playsinline></a-video>
-   
+           </a-entity>
         </a-entity>
       </a-scene>
     </div>
