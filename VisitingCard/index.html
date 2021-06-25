@@ -75,7 +75,7 @@
       const showIntro = () => {
       	  const introId = document.querySelector("#intro_card");
       	   introId.setAttribute("visible", true);
-      	   document.querySelector("#video-mp4").pause();
+      	   document.querySelector("#video-mp4").play();
       	  
         }
 
@@ -156,7 +156,7 @@
           
           this.el.addEventListener('targetLost', event => {
             console.log("target lost");
-             document.querySelector("#video-mp4").stop();
+             document.querySelector("#video-mp4").pause();
           });
           //this.el.emit('targetFound');
         })
