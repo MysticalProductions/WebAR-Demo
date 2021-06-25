@@ -84,20 +84,31 @@
       	   //video frame animation
       	   const videoIntro = document.querySelector("#video-mp4"); //setvideo
       	   const videoframe = document.querySelector("#introvideo");//set video entity
-      	   const id = setInterval(() => {
+      	   const vid = setInterval(() => {
            x += 0.2;
            if (x >=1) 
+           {
+            clearInterval(vid);
+            done();
+           }
+           videoframe.setAttribute("position", x + " 0 0");  //set position of video entity
+        },400);
+      	   setTimeout(()=>{
+      	   	videoIntro.play(); //play video after animation 
+      	   },450);
+         // idcard event
+         let y =0;
+         const idCard = document.querySelector("intro_card");
+          idCard.setAttribute("visible", true);
+          const id = setInterval(() => {
+           y += 0.1;
+           if (y >=0.5) 
            {
             clearInterval(id);
             done();
            }
-           videoframe.setAttribute("position", x + " 0 0");  //set position of video entity
+           idCard.setAttribute("position","0" + " 0 0");  //set position of video entity
         },200);
-      	   setTimeout(()=>{
-      	   	videoIntro.play(); //play video after animation 
-      	   },250);
-         // idcard event
-         const idCard
 
 
         
@@ -330,7 +341,7 @@
 
            <a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
    
-           <a-image visible=true id="intro_card" src="#intro" alpha-test="0.5" position="0 0 0" height="0.552" width="1" animation="property: position; to: 0 0.5 0; easing: easeInOutQuad; dir:alternate; dur: 5000; loop: false"
+           <a-image visible= false id="intro_card" src="#intro" alpha-test="0.5" position="0 0 0" height="0.552" width="1"
           ></a-image>
 
            <a-image visible=false id="fb-button" class="clickable" src="#icon-fb" alpha-test="0.4" position="-0.4 -0.4 0" height="0.11" width="0.11"
