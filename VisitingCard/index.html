@@ -6,7 +6,7 @@
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@0.4.2/dist/mindar.prod.js"></script>
 
     <script>
-      const showInfo = () => {
+     /* const showInfo = () => {
       	console.log("show");
         let y = 0;
         const instaButton = document.querySelector("#insta-button");
@@ -96,6 +96,12 @@
       	   setTimeout(()=>{
       	   	videoIntro.play(); //play video after animation 
       	   },250);
+         // idcard event
+         const idCard
+
+
+        
+      	   //Buttons Events
       	const instaButton = document.querySelector("#insta-button");
         const fbButton = document.querySelector("#fb-button");
         const emailButton = document.querySelector("#email-button");
@@ -324,7 +330,7 @@
 
            <a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
    
-           <a-image visible=false id="intro_card" src="#intro" alpha-test="0.5" position="0 0 0" height="0.552" width="1" animation="property: position; to: 0 0.5 0; easing: easeInOutQuad; dir:alternate; dur: 5000; loop: false"
+           <a-image visible=true id="intro_card" src="#intro" alpha-test="0.5" position="0 0 0" height="0.552" width="1" animation="property: position; to: 0 0.5 0; easing: easeInOutQuad; dir:alternate; dur: 5000; loop: false"
           ></a-image>
 
            <a-image visible=false id="fb-button" class="clickable" src="#icon-fb" alpha-test="0.4" position="-0.4 -0.4 0" height="0.11" width="0.11"
