@@ -78,11 +78,22 @@
       	  
         }*/
          const showIntro = () => {
+         	let x=0;
       	  const introId = document.querySelector("#intro_card");
       	   introId.setAttribute("visible", true);
+      	   const videoframe = document.querySelector("#video-mp4");
+      	   videoframe.setAttribute("position", x + "0 -0.01");
+      	   const id = setInterval(() => {
+           x += 0.3;
+           if (x >= 1) {
+            clearInterval(id);
+            onDone();
+          }
+          videoframe.setAttribute("position", x + "0 0");
+        },10);
       	   document.querySelector("#video-mp4").play();
-      	   const instaButton = document.querySelector("#insta-button");
-          const fbButton = document.querySelector("#fb-button");
+      	const instaButton = document.querySelector("#insta-button");
+        const fbButton = document.querySelector("#fb-button");
         const emailButton = document.querySelector("#email-button");
         const phoneButton = document.querySelector("#phone-button");
         const webButton = document.querySelector("#web-button");
