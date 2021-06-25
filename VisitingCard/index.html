@@ -147,21 +147,17 @@
         init: function () {
           this.el.addEventListener('targetFound', event => {
             console.log("target found");
-                showIntro(() => {
-                    showInfo(() => {
-                    	
-                  },);
-                
-              },);
-            
+                showIntro(() => {});
+                    showInfo(() => {});
+                });
           
           this.el.addEventListener('targetLost', event => {
             console.log("target lost");
              document.querySelector("#video-mp4").pause();
           });
           //this.el.emit('targetFound');
-        })
-      }
+        });
+      
   });
     </script>
 
