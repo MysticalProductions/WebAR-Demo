@@ -75,7 +75,7 @@
       const showIntro = () => {
       	  const introId = document.querySelector("#intro_card");
       	   introId.setAttribute("visible", true);
-      	   document.querySelector("#video-mp4").play();
+      	   document.querySelector("#video-mp4").pause();
       	  
         }
 
@@ -260,7 +260,7 @@
           <img id="icon-fb" src="./assets/icon/facebook.png"/>
           <img id="icon-insta" src="./assets/icon/instagram.png"/>
           <img id="intro" src="./assets/intro.png"/>
-          <video id="video-mp4" autoplay="false" loop="true" src="./assets/video.mp4"></video>
+          <video id="video-mp4" autoplay="false" loop="false" src="./assets/video.mp4"></video>
         </a-assets>
          
         <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: 10000; objects: .clickable">
