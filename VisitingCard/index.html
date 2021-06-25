@@ -51,7 +51,6 @@
           currentTab = 'phone';
         });
          
-
         text.addEventListener('click', function (evt) {
           if (currentTab === 'web') {
             window.location.href="https://www.chockytales.com";
@@ -72,12 +71,78 @@
       }
 
 
-      const showIntro = () => {
+     /* const showIntro = () => {
       	  const introId = document.querySelector("#intro_card");
       	   introId.setAttribute("visible", true);
-      	   //.querySelector("#video-mp4").play();
+      	   document.querySelector("#video-mp4").play();
+      	  
+        }*/
+         const showIntro = () => {
+      	  const introId = document.querySelector("#intro_card");
+      	   introId.setAttribute("visible", true);
+      	   document.querySelector("#video-mp4").play();
+      	   const instaButton = document.querySelector("#insta-button");
+          const fbButton = document.querySelector("#fb-button");
+        const emailButton = document.querySelector("#email-button");
+        const phoneButton = document.querySelector("#phone-button");
+        const webButton = document.querySelector("#web-button");
+        
+        instaButton.setAttribute("visible", true);
+        setTimeout(() => {
+          fbButton.setAttribute("visible", true);
+        }, 600);
+        setTimeout(() => {
+          emailButton.setAttribute("visible", true);
+        }, 900);
+        setTimeout(() => {
+          phoneButton.setAttribute("visible", true);
+        }, 1200);
+        setTimeout(() => {
+          webButton.setAttribute("visible", true);
+        }, 1500);
+
+        let currentTab = '';
+        webButton.addEventListener('click', function (evt) {
+          text.setAttribute("value","https://www.chockytales.com");
+          currentTab = 'web';
+        });
+        emailButton.addEventListener('click', function (evt) {
+          text.setAttribute("value","info@chockytales.com");
+          currentTab = 'email';
+        });
+        instaButton.addEventListener('click', function (evt) {
+          text.setAttribute("value", "https://instagram.com/chockytales?igshid=10si6cktw7obb");
+          currentTab = 'insta';
+        });
+        fbButton.addEventListener('click', function (evt) {
+          text.setAttribute("value", "https://www.facebook.com/chockytales/");
+          currentTab = 'fb';
+        }); 
+        phoneButton.addEventListener('click', function (evt) {
+          text.setAttribute("value", "tel:5554280940");
+          currentTab = 'phone';
+        });
+         
+        text.addEventListener('click', function (evt) {
+          if (currentTab === 'web') {
+            window.location.href="https://www.chockytales.com";
+          }
+          else if (currentTab === 'email') {
+            window.location.href="mailto:info@chockytales.com";
+          }
+          else if (currentTab === 'insta') {
+            window.location.href="https://instagram.com/chockytales?igshid=10si6cktw7obb";
+          }
+          else if (currentTab === 'fb') {
+            window.location.href="https://www.facebook.com/chockytales/";
+          }
+          else if (currentTab === 'phone') {
+            window.location.href="tel:5554280940";
+          }
       	  
         }
+
+    }
 
      /* const showPortfolio = (done) => {
         const portfolio = document.querySelector("#portfolio-panel");
@@ -147,10 +212,7 @@
           this.el.addEventListener('targetFound', event => {
             console.log("target found");
                 showIntro(() => {
-                    showInfo(() => {
-                    	
-                  }, 300);
-                
+                            
               }, 300);
             
           
