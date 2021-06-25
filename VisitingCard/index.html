@@ -83,15 +83,15 @@
       	   introId.setAttribute("visible", true);
       	   const videoframe = document.querySelector("#introvideo");
       	   const id = setInterval(() => {
-           x += 0.5;
-           console.log(x);
-           if (x >= 1) 
+           x += 0.2;
+           
+           if (x >= 1.5) 
            {
             clearInterval(id);
             done();
            }
-           videoframe.setAttribute("position", x + " 0 -0.1");
-          console.log(x + " 0 0");
+           videoframe.setAttribute("position", x + " 0 0");
+          
         },200);
            
       	const instaButton = document.querySelector("#insta-button");
