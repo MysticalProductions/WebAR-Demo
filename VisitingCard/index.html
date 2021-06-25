@@ -83,8 +83,10 @@
       	   introId.setAttribute("visible", true);
       	   const videoframe = document.querySelector("#video-mp4");
       	   const id = setInterval(() => {
+      	   	console.log("hello");
            x += 0.2;
-           if (x >= 1) {
+           if (x >= 1) 
+           {
             clearInterval(id);
           }
           videoframe.setAttribute("position", x + "0 0");
