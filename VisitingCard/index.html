@@ -99,10 +99,10 @@
 	            
 	           }
 	           videoframe.setAttribute("position", x + " 0 0");  //set position of video entity
-	        },1500);
+	        },3000);
 	      	   setTimeout(()=>{
 	      	   	videoIntro.play(); //play video after animation 
-	      	   },2000);
+	      	   },3500);
 	         // idcard event
 	         let y =0;
 	         const idCard = document.querySelector("#intro_card_ent");
@@ -114,7 +114,7 @@
 	            clearInterval(id);
 	           }
 	           idCard.setAttribute("position","0 " + y +" 0");  //set position of idcard entity
-	        },700);
+	        },500);
 
 
 	        
@@ -130,16 +130,16 @@
 	        fbButton.setAttribute("visible", true);
 	        setTimeout(() => {
 	          instaButton.setAttribute("visible", true);
-	        }, 2500);
+	        }, );
 	        setTimeout(() => {
 	          phoneButton.setAttribute("visible", true);
-	        }, 3000);
+	        }, 1500);
 	        setTimeout(() => {
 	          webButton.setAttribute("visible", true);
-	        }, 3500);
+	        }, 2000);
 	        setTimeout(() => {
 	         emailButton.setAttribute("visible", true);
-	        }, 4000);
+	        }, 2500);
 	        },1000);
 	        let currentTab = '';
 	        webButton.addEventListener('click', function (evt) {
