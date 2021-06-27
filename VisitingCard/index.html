@@ -331,62 +331,59 @@
 	      }
 
 	    .modalDialog {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 99999;
-  display:none;
-  opacity: 1;
-  -webkit-transition: opacity 400ms ease-in;
-  -moz-transition: opacity 400ms ease-in;
-  transition: opacity 400ms ease-in;
+		  position: fixed;
+		  top: 0;
+		  right: 0;
+		  bottom: 0;
+		  left: 0;
+		  z-index: 99999;
+		  display:none;
+		  opacity: 1;
+		  -webkit-transition: opacity 400ms ease-in;
+		  -moz-transition: opacity 400ms ease-in;
+		  transition: opacity 400ms ease-in;
 
-}
-.modalDialog > div {
-  width: 400px;
-  position: relative;
-  margin: 10% auto;
-  padding: 5px 20px 13px 20px;
-  border-radius: 10px;
-  background: #fff;
-  background: #339999;
-}
-.close {
-  background: #606061;
-  color: #FFFFFF;
-  line-height: 25px;
-  position: absolute;
-  right: -12px;
-  text-align: center;
-  top: -10px;
-  width: 24px;
-  text-decoration: none;
-  font-weight: bold;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  border-radius: 12px;
-  -moz-box-shadow: 1px 1px 3px #000;
-  -webkit-box-shadow: 1px 1px 3px #000;
-  box-shadow: 1px 1px 3px #000;
-}
-.close:hover {
-  background: #00d9ff;
-}
+		}
+		.modalDialog > div {
+		  width: 400px;
+		  position: relative;
+		  margin: 10% auto;
+		  padding: 5px 20px 13px 20px;
+		  border-radius: 10px;
+		  background: #fff;
+		  background: #ffffff;
+		}
+		.close {
+		  background: #606061;
+		  color: #FFFFFF;
+		  line-height: 25px;
+		  position: absolute;
+		  right: -12px;
+		  text-align: center;
+		  top: -10px;
+		  width: 24px;
+		  text-decoration: none;
+		  font-weight: bold;
+		  -webkit-border-radius: 12px;
+		  -moz-border-radius: 12px;
+		  border-radius: 12px;
+		  -moz-box-shadow: 1px 1px 3px #000;
+		  -webkit-box-shadow: 1px 1px 3px #000;
+		  box-shadow: 1px 1px 3px #000;
+		}
+		.close:hover {
+		  background: #00d9ff;
+		}
 	    </style>
+	  
 	  </head>
       <body>
-	    <a href="#openModal">Open Modal</a>
-
-<div id="openModal" class="modalDialog">
-  <div>
-    <a href="#close" title="Close" class="close">X</a>
-
-    <p style="color:white">This is a sample modal box that can be created using the powers of CSS3.</p>
-
-  </div>
-</div>
+	    <div id="openModal" class="modalDialog">
+            <div>
+                <a href="#close" title="Close" class="close">X</a>
+                <p style="color:black">This is a sample modal box that can be created using the powers of CSS3.</p>
+            </div>
+        </div>
 	    <div class="example-container">
 	        <div id="example-scanning-overlay" class="hidden">
 		        <div class="inner">
