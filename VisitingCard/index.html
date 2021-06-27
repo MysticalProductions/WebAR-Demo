@@ -194,12 +194,17 @@
 		align-self: center;
 	      }
 
-	      #example-scanning-overlay .inner{
+	      #example-scanning-overlay .inner .scanline {
 		position: absolute;
 		width: 100%;
 		height: 10px;
 		background: white;
-		
+		animation: move 2s linear infinite;
+	      }
+	      @keyframes move {
+		0%, 100% { top: 0% }
+		50% { top: calc(100% - 10px) }
+	      }
 
 	    .modalDialog {
 		  position: fixed;
