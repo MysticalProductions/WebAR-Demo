@@ -261,15 +261,28 @@
 			  -ms-transform: translateX(-50%);
 			  transform: translateX(-50%);
 		}
-		.scantext{
-			position:absolute;
-			color: white;
-			text-align: center;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-		}
-
+		 h2 {
+            font-size: 5em;
+            font-family: serif;
+            color: #ffffff;
+            text-align: center;
+            animation: animate 
+                1.5s linear infinite;
+        }
+  
+        @keyframes animate {
+            0% {
+                opacity: 0;
+            }
+  
+            50% {
+                opacity: 0.7;
+            }
+  
+            100% {
+                opacity: 0;
+            }
+        }
 		
 		
 	    </style>
@@ -294,7 +307,7 @@
 	        <div id="example-scanning-overlay" class="hidden">
 		        <div class="inner">
 		            <img src="./assets/targets.jpg"/>
-		            <h2 class = "scantext"> Scan the Card</h2>
+		            <h2 class = "scantext"> Scan Me</h2>
 		        </div>
 	        </div>
 
