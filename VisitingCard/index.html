@@ -23,74 +23,7 @@
 	    <script>
 	    	let x =0;
 	    	let y=0;
-	     /* const showInfo = () => {
-	      	console.log("show");
-	        let y = 0;
-	        const instaButton = document.querySelector("#insta-button");
-	        const fbButton = document.querySelector("#fb-button");
-	        const emailButton = document.querySelector("#email-button");
-	        const phoneButton = document.querySelector("#phone-button");
-	        const webButton = document.querySelector("#web-button");
-	        
-	        fbButton.setAttribute("visible", true);
-	        setTimeout(() => {
-	          instaButton.setAttribute("visible", true);
-	        }, 300);
-	        setTimeout(() => {
-	          webButton.setAttribute("visible", true);
-	        }, 600);
-	        setTimeout(() => {
-	         emailButton.setAttribute("visible", true);
-	        }, 900);
-	        setTimeout(() => {
-	         phoneButton.setAttribute("visible", true);
-	        }, 1200);
-	        let currentTab = '';
-	        webButton.addEventListener('click', function (evt) {
-	          text.setAttribute("value","https://www.chockytales.com");
-	          currentTab = 'web';
-	        });
-	        emailButton.addEventListener('click', function (evt) {
-	          text.setAttribute("value","info@chockytales.com");
-	          currentTab = 'email';
-	        });
-	        instaButton.addEventListener('click', function (evt) {
-	          text.setAttribute("value", "https://instagram.com/chockytales?igshid=10si6cktw7obb");
-	          currentTab = 'insta';
-	        });
-	        fbButton.addEventListener('click', function (evt) {
-	          text.setAttribute("value", "https://www.facebook.com/chockytales/");
-	          currentTab = 'fb';
-	        }); 
-	        phoneButton.addEventListener('click', function (evt) {
-	          text.setAttribute("value", "tel:5554280940");
-	          currentTab = 'phone';
-	        });
-	         
-	        text.addEventListener('click', function (evt) {
-	          if (currentTab === 'web') {
-	            window.location.href="https://www.chockytales.com";
-	          }
-	          else if (currentTab === 'email') {
-	            window.location.href="mailto:info@chockytales.com";
-	          }
-	          else if (currentTab === 'insta') {
-	            window.location.href="https://instagram.com/chockytales?igshid=10si6cktw7obb";
-	          }
-	          else if (currentTab === 'fb') {
-	            window.location.href="https://www.facebook.com/chockytales/";
-	          }
-	          else if (currentTab === 'phone') {
-	            window.location.href="tel:5554280940";
-	          }
-	        });
-	      }
-	     /* const showIntro = () => {
-	      	  const introId = document.querySelector("#intro_card");
-	      	   introId.setAttribute("visible", true);
-	      	   document.querySelector("#video-mp4").play();
-	      	  
-	        }*/
+	     
 	         const showIntro = () => {
 	         	
 	      	  const introId = document.querySelector("#intro_card");
@@ -176,63 +109,7 @@
 
 	    }
 
-	     /* const showPortfolio = (done) => {
-	        const portfolio = document.querySelector("#portfolio-panel");
-	        const paintandquestPreviewButton = document.querySelector("#paintandquest-preview-button");
-	        let y = 0;
-	        let currentItem = 0;
-	        portfolio.setAttribute("visible", true);
-	        const showPortfolioItem = (item) => {
-	          for (let i = 0; i <= 2; i++) {
-	            document.querySelector("#portfolio-item" + i).setAttribute("visible", i === item);
-	          }
-	        }
-	        const id = setInterval(() => {
-	          y += 0.008;
-	          if (y >= 0.6) {
-	            clearInterval(id);
-	           /* portfolioLeftButton.setAttribute("visible", true);
-	            portfolioRightButton.setAttribute("visible", true);
-	            portfolioLeftButton.addEventListener('click', () => {
-	              currentItem = (currentItem + 1) % 3;
-	              showPortfolioItem(currentItem);
-	            });
-	            portfolioRightButton.addEventListener('click', () => {
-	              currentItem = (currentItem - 1 + 3) % 3;
-	              showPortfolioItem(currentItem);
-	            });
-	            paintandquestPreviewButton.addEventListener('click', () => {
-	              paintandquestPreviewButton.setAttribute("visible", false);
-	              const testVideo = document.createElement( "video" );
-	              const canplayWebm = testVideo.canPlayType( 'video/webm; codecs="vp8, vorbis"' );
-	              if (canplayWebm == "") {
-	                document.querySelector("#paintandquest-video-link").setAttribute("src", "#paintandquest-video-mp4");
-	                document.querySelector("#paintandquest-video-mp4").play();
-	              } else {
-	                document.querySelector("#paintandquest-video-link").setAttribute("src", "#paintandquest-video-webm");
-	                document.querySelector("#paintandquest-video-webm").play();
-	              }
-	            });
-	            setTimeout(() => {
-	              done();
-	            }, 500);
-	          }
-	          portfolio.setAttribute("position", "0 " + y + " -0.01");
-	        }, 10);
-	      }
-	      /*const showAvatar = (onDone) => {
-	        const avatar = document.querySelector("#avatar");
-	        let z = -0.3;
-	        const id = setInterval(() => {
-	          z += 0.008;
-	          if (z >= 0.3) {
-	            clearInterval(id);
-	            onDone();
-	          }
-	          avatar.setAttribute("position", "0 -0.25 " + z);
-	        }, 10);
-	      }*/
-
+	     
 	      AFRAME.registerComponent('mytarget',{
 	        init: function () {
 	          this.el.addEventListener('targetFound', event => {
@@ -409,7 +286,7 @@
 	        <div id="example-scanning-overlay" class="hidden">
 		        <div class="inner">
 		            <img src="./assets/targets.jpg"/>
-		            <div class="scanline"></div>
+		            
 		        </div>
 	        </div>
 
