@@ -7,6 +7,7 @@
 	    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@0.4.2/dist/mindar.prod.js"></script>
 	    
 	    <script>
+<<<<<<< HEAD
 	 	  $( document ).ready(function() {
           $('.modalDialog').fadeIn();
           $('.close').on('click', function(event) {
@@ -16,6 +17,11 @@
         });
        });
 
+=======
+	 	  $(document).ready(function(){
+			 $("#myModal").modal('show');
+		});
+>>>>>>> parent of 9d38d89 (Update index.html)
 	    </script>
 	    <script type="text/javascript">            
 	    	/*const showInfo = () => {
@@ -325,6 +331,7 @@
 		0%, 100% { top: 0% }
 		50% { top: calc(100% - 10px) }
 	      }
+<<<<<<< HEAD
 
 	    .modalDialog {
 		  position: fixed;
@@ -374,10 +381,13 @@
 			color:black;
 			text-align: center;
 		}
+=======
+>>>>>>> parent of 9d38d89 (Update index.html)
 	    </style>
 	  
 	  </head>
       <body>
+<<<<<<< HEAD
 	    <div id="openModal" class="modalDialog">
             <div>
             	<h2 class = "head"> Instructions</h2>
@@ -388,6 +398,22 @@
                 <p style="color:black">This is a sample modal box that can be created using the powers of CSS3.</p>
                 <p style="color:black">This is a sample modal box that can be created using the powers of CSS3.</p>
                 <button >Start</button>
+=======
+	    <div id="myModal"   padding-top = "100px" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" text-align ="center">Instructions</h5>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+		                <p>Take your card</p>
+		                <p>Scan the front side</p>
+		                <p>Enjoy!</p>
+                       <button type="buttton" data-dismiss="modal" class="btn btn-primary">Start</button>
+                    </div>
+                </div>
+>>>>>>> parent of 9d38d89 (Update index.html)
             </div>
         </div>
 	    <div class="example-container">
