@@ -90,34 +90,36 @@
 	      	  
 	        }*/
 	         const showIntro = () => {
-	         	let x=0;
+	         	
 	      	  const introId = document.querySelector("#intro_card");
 	      	   introId.setAttribute("visible", true);
 	      	   //video frame animation
 	      	   const videoIntro = document.querySelector("#video-mp4"); //setvideo
 	      	   const videoframe = document.querySelector("#introvideo");//set video entity
 	      	   const vid = setInterval(() => {
-	           x += 0.2;
+	           
 	           if (x >=0.8) 
 	           {
 	            clearInterval(vid);
 	            
 	           }
+	            x += 0.2;
 	           videoframe.setAttribute("position", x + " 0 0");  //set position of video entity
 	        },200);
 	      	   setTimeout(()=>{
 	      	   	videoIntro.play(); //play video after animation 
 	      	   },1000);
 	         // idcard event
-	         let y =0;
+	         
 	         const idCard = document.querySelector("#intro_card_ent");
 	         
 	          const id = setInterval(() => {
-	           y += 0.1;
+	         
 	           if (y >=0.5) 
 	           {
 	            clearInterval(id);
 	           }
+	            y += 0.1;
 	           idCard.setAttribute("position","0 " + y +" 0");  //set position of idcard entity
 	        },200);
 
