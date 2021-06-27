@@ -99,14 +99,15 @@
 	      	   const videoIntro = document.querySelector("#video-mp4"); //setvideo
 	      	   const videoframe = document.querySelector("#introvideo");//set video entity
 	      	   const vid = setInterval(() => {
-	           
+	           if(x<0.8){
 	           	 x += 0.2;
+	           }
 	           
-	           if (x >=0.8) 
-	           {
+	            if (x >=0.8) 
+	            {
 	            clearInterval(vid);
 	            
-	           }
+	            }
 	           
 	           videoframe.setAttribute("position", x + " 0 0");  //set position of video entity
 	        },200);
@@ -118,9 +119,9 @@
 	         const idCard = document.querySelector("#intro_card_ent");
 	         
 	          const id = setInterval(() => {
-	           
+	           if(y<0.5){
 	           	y+=0.1;
-	           
+	           }
 	           if (y >=0.5) 
 	           {
 	            clearInterval(id);
